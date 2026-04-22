@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jeeplus.sys.mapper.OfficeMapper">
+
+    <!-- 分页查询用户信息 -->
+    <select id="findList" resultType="com.jeeplus.sys.service.dto.OfficeDTO">
+        SELECT a.id,
+               a.parent_id    AS "parent.id",
+               a.parent_ids,
+               a.area,
+               a.code,
+               a.name,
+               a.sort,
+               a.type,
+               a.grade,
+               a.address,
+               a.zip_code,
+               a.master,
+               a.phone,
+               a.fax,
+               a.email,
+               a.remarks,
+               a.create_by_id AS "createBy.id",
+               a.create_time,
+               a.update_by_id AS "updateBy.id",
+               a.update_time,
+               a.del_flag,
+               a.useable      AS useable,
+               p.name         AS "parent.name"
+        FROM sys_office a
+                 LEFT JOIN sys_office p ON p.id = a.parent_id
+            ${ew.customSqlSegment}
+    </select>
+
+</mapper>
