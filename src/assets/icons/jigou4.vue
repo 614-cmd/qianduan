@@ -1,0 +1,18 @@
+<template>
+	<svg
+		t="1654248119118"
+		class="icon"
+		viewBox="0 0 1024 1024"
+		version="1.1"
+		xmlns="http://www.w3.org/2000/svg"
+		p-id="34747"
+		xmlns:xlink="http://www.w3.org/1999/xlink"
+		width="200"
+		height="200"
+	>
+		<path
+			d="M960 1024h-320v-384h128V576H256v64h128v384H0v-384h128V448h320V384H320V0h384v384H576v64h320v192h128v384h-64zM128 896h128v-128H128v128zM576 128H448v128h128V128z m320 640h-128v128h128v-128z"
+			p-id="34748"
+		></path>
+	</svg>
+</template>

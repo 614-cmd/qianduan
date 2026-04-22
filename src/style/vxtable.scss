@@ -1,0 +1,275 @@
+
+        //@import 'vxe-table/styles/variable.scss';
+
+
+        $vxe-primary-color: var(--el-color-primary);
+        // $vxe-input-border-color: var(--el-color-primary);
+
+
+        // @import 'vxe-table/styles/menu.scss';
+        // @import 'vxe-table/styles/export.scss';
+        // @import 'vxe-table/styles/icon.scss';
+        // @import 'vxe-table/styles/table.scss';
+        // @import 'vxe-table/styles/column.scss';
+        // @import 'vxe-table/styles/header.scss';
+        // @import 'vxe-table/styles/footer.scss';
+        // @import 'vxe-table/styles/filter.scss';
+        // @import 'vxe-table/styles/icon.scss';
+        // @import 'vxe-table/styles/table.scss';
+        // @import 'vxe-table/styles/column.scss';
+        // @import 'vxe-table/styles/colgroup.scss';
+        // @import 'vxe-table/styles/header.scss';
+        // @import 'vxe-table/styles/footer.scss';
+        // @import 'vxe-table/styles/filter.scss';
+        // @import 'vxe-table/styles/menu.scss';
+        // @import 'vxe-table/styles/export.scss';
+        
+        // @import 'vxe-table/styles/grid.scss';
+        // @import 'vxe-table/styles/toolbar.scss';
+        // // @import 'vxe-table/styles/pager.scss';
+        // @import 'vxe-table/styles/checkbox.scss';
+        // @import 'vxe-table/styles/checkbox-group.scss';
+        // // @import 'vxe-table/styles/radio.scss';
+        // @import 'vxe-table/styles/radio-group.scss';
+        // @import 'vxe-table/styles/radio-button.scss';
+        // // @import 'vxe-table/styles/input.scss';
+        // @import 'vxe-table/styles/textarea.scss';
+        // // @import 'vxe-table/styles/button.scss';
+        // @import 'vxe-table/styles/modal.scss';
+        // @import 'vxe-table/styles/tooltip.scss';
+        // // @import 'vxe-table/styles/form.scss';
+        // @import 'vxe-table/styles/form-item.scss';
+        // @import 'vxe-table/styles/form-gather.scss';
+        // @import 'vxe-table/styles/select.scss';
+        // @import 'vxe-table/styles/optgroup.scss';
+        // @import 'vxe-table/styles/option.scss';
+        // // @import 'vxe-table/styles/switch.scss';
+        // @import 'vxe-table/styles/list.scss';
+        // @import 'vxe-table/styles/pulldown.scss';
+
+
+        .vxe-toolbar .vxe-custom--wrapper.is--active>.vxe-button {
+            background-color: transparent;
+        }
+
+
+        .vxe-button.type--button.theme--primary:not(.is--disabled) {
+            border-color: $vxe-primary-color;
+            background-color: $vxe-primary-color;
+        }
+
+        .vxe-pager.is--background .vxe-pager--jump-next:not(.is--disabled).is--active, .vxe-pager.is--background .vxe-pager--jump-prev:not(.is--disabled).is--active, .vxe-pager.is--background .vxe-pager--num-btn:not(.is--disabled).is--active, .vxe-pager.is--perfect .vxe-pager--jump-next:not(.is--disabled).is--active, .vxe-pager.is--perfect .vxe-pager--jump-prev:not(.is--disabled).is--active, .vxe-pager.is--perfect .vxe-pager--num-btn:not(.is--disabled).is--active {
+            color: #fff;
+            background-color: $vxe-primary-color;
+        }
+
+        .vxe-pager.is--background .vxe-pager--jump-next:not(.is--disabled).is--active:hover, .vxe-pager.is--background .vxe-pager--jump-prev:not(.is--disabled).is--active:hover, .vxe-pager.is--background .vxe-pager--num-btn:not(.is--disabled).is--active:hover, .vxe-pager.is--perfect .vxe-pager--jump-next:not(.is--disabled).is--active:hover, .vxe-pager.is--perfect .vxe-pager--jump-prev:not(.is--disabled).is--active:hover, .vxe-pager.is--perfect .vxe-pager--num-btn:not(.is--disabled).is--active:hover {
+            background-color: $vxe-primary-color;
+        }
+
+$btnThemeList: (
+  (
+    name: "primary",
+    textColor: $vxe-primary-color,
+    btnColor: #fff,
+    btnBackground: $vxe-primary-color
+  )
+);
+
+.vxe-button {
+  &.type--text {
+    &:not(.is--disabled) {
+      &:focus {
+        box-shadow: 0 0 0.25em 0 $vxe-primary-color;
+      }
+      &:hover {
+        color: var(--el-color-primary-light-1)
+      }
+    }
+  }
+  &.type--button {
+    border: 0;
+    &:not(.is--disabled) {
+      &:hover {
+        color: var(--el-color-primary-light-2);
+        .vxe-button--icon {
+          &.vxe-icon--zoomin {
+            border-color: var(--el-color-primary-light-2)
+          }
+        }
+      }
+      &:focus {
+        box-shadow: none;
+        border-color: transparent;
+        background-color: transparent;
+      }
+      &:active {
+        color: var(--el-color-primary);
+        border-color: transparent;
+        background-color: transparent;
+
+      }
+    }
+  }
+}
+.vxe-button--dropdown {
+  &.is--active {
+    & > .vxe-button {
+      &:not(.is--disabled) {
+        color: var(--el-color-primary-light-2)
+      }
+    }
+  }
+}
+
+/*pager*/
+.vxe-pager {
+    .vxe-pager--jump-next {
+      &:not(.is--disabled) {
+        &:focus {
+          box-shadow: 0 0 0.25em 0 $vxe-primary-color;
+        }
+        &:hover {
+          color: var(--el-color-primary-light-2);
+        }
+        &:active {
+          background-color: val(--el-color-primary-dark-1);
+        }
+      }
+    }
+    &.is--perfect {
+      .vxe-pager--jump-next {
+        &:not(.is--disabled) {
+          &.is--active {
+            &:hover {
+              border-color: val(--el-color-primary-dark-1);
+              color: var(--el-color-primary-light-2);
+            }
+            &:active {
+              border-color: val(--el-color-primary-dark-1);
+              color: val(--el-color-primary-dark-1);
+            }
+          }
+        }
+      }
+    }
+    .vxe-pager--num-btn {
+      &:not(.is--disabled) {
+        &:hover {
+          color: var(--el-color-primary-light-2);
+        }
+        &:active {
+          color: val(--el-color-primary-dark-1);
+        }
+      }
+    }
+  }
+
+  .vxe-pager .vxe-pager--jump .vxe-pager--goto:focus {
+    border: 1px solid $vxe-primary-color;
+  }
+
+  .vxe-pager.is--background .vxe-pager--jump-next:not(.is--disabled).is--active:focus, .vxe-pager.is--background .vxe-pager--jump-prev:not(.is--disabled).is--active:focus, .vxe-pager.is--background .vxe-pager--num-btn:not(.is--disabled).is--active:focus, .vxe-pager.is--perfect .vxe-pager--jump-next:not(.is--disabled).is--active:focus, .vxe-pager.is--perfect .vxe-pager--jump-prev:not(.is--disabled).is--active:focus, .vxe-pager.is--perfect .vxe-pager--num-btn:not(.is--disabled).is--active:focus {
+    border-color: $vxe-primary-color;
+}
+.vxe-pager.is--background .vxe-pager--jump-next:not(.is--disabled).is--active:active, .vxe-pager.is--background .vxe-pager--jump-prev:not(.is--disabled).is--active:active, .vxe-pager.is--background .vxe-pager--num-btn:not(.is--disabled).is--active:active, .vxe-pager.is--perfect .vxe-pager--jump-next:not(.is--disabled).is--active:active, .vxe-pager.is--perfect .vxe-pager--jump-prev:not(.is--disabled).is--active:active, .vxe-pager.is--perfect .vxe-pager--num-btn:not(.is--disabled).is--active:active {
+    border-color: $vxe-primary-color;
+    // background-color: $vxe-primary-color;
+}
+.vxe-input:not(.is--disabled).is--active .vxe-input--inner{
+    border: 1px solid $vxe-primary-color;
+}
+
+
+.vxe-pager .vxe-pager--num-btn:not(.is--disabled):focus, .vxe-pager .vxe-pager--prev-btn:not(.is--disabled):focus {
+    box-shadow: 0 0 0.25em 0 $vxe-primary-color;
+}
+.vxe-pager .vxe-pager--next-btn:not(.is--disabled):hover {
+    color: $vxe-primary-color;
+}
+.vxe-pager .vxe-pager--prev-btn:not(.is--disabled):hover {
+    color: $vxe-primary-color;
+}
+
+.vxe-pager .vxe-pager--jump-next:not(.is--disabled):focus, .vxe-pager .vxe-pager--jump-prev:not(.is--disabled):focus, .vxe-pager .vxe-pager--next-btn:not(.is--disabled):focus, .vxe-pager .vxe-pager--num-btn:not(.is--disabled):focus, .vxe-pager .vxe-pager--prev-btn:not(.is--disabled):focus {
+    box-shadow: 0 0 0.25em 0 $vxe-primary-color
+}
+.vxe-header--column {
+  font-weight: bold;
+}
+.vxe-table .vxe-table--header-wrapper {
+  color: #606266;
+}
+
+.vxe-table--render-default.size--small {
+  font-size: 14px;
+}
+.vxe-header--row th {
+  background: #f8f8f9;
+}
+
+.vxe-table--render-default
+.vxe-body--row.row--hover{
+  background-color: #f0fafe;
+}
+
+
+// 缩略文字
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.vxe-pager {
+  text-align: center;
+}
+
+.vxe-pager.is--background .vxe-pager--num-btn:not(.is--disabled):hover,
+.vxe-pager.is--background .vxe-pager--num-btn:not(.is--disabled).is--active{
+  font-family: Arial;
+  font-weight: 500;
+  border-color: var(--el-color-primary) !important;
+  color: var(--el-color-primary) !important;
+  background-color: #fff !important;
+}
+
+.vxe-pager.is--background .vxe-pager--prev-btn,
+.vxe-pager.is--background .vxe-pager--num-btn,
+.vxe-pager.is--background .vxe-pager--next-btn {
+  font-family: Arial;
+  font-weight: 500;
+  background-color: #fff;
+  border: 1px solid #dcdee2;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.vxe-pager .vxe-pager--jump-next:not(.is--disabled):focus,
+ .vxe-pager .vxe-pager--jump-prev:not(.is--disabled):focus,
+ .vxe-pager .vxe-pager--next-btn:not(.is--disabled):focus,
+ .vxe-pager .vxe-pager--num-btn:not(.is--disabled):focus,
+ .vxe-pager .vxe-pager--prev-btn:not(.is--disabled):focus{
+  box-shadow: 0 0 !important;
+}
+
+.tool-btn {
+  cursor: pointer;
+}
+.tool-btn:hover {
+  color: var(--el-color-primary);
+}
+.tool-btn.vxe-button.type--text:not(.is--disabled):focus {
+  box-shadow: 0 0 ;
+}
+.vxe-tools--wrapper {
+  .vxe-button{
+    padding: 0 0.5em;
+    min-width: 34px;
+    border-radius: 50%;
+    margin-right: 12px;
+  }
+}
+.vxe-cell .el-button.is-text, .cell .el-button.is-text {
+  font-weight: 400;
+}

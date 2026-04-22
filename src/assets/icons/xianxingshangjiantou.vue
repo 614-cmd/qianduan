@@ -1,0 +1,15 @@
+<template>
+	<svg
+		class="icon"
+		width="200px"
+		height="200.00px"
+		viewBox="0 0 1024 1024"
+		version="1.1"
+		xmlns="http://www.w3.org/2000/svg"
+	>
+		<path
+			fill="currentColor"
+			d="M972.8 716.8a51.2 51.2 0 0 0-14.848-36.352l-409.6-409.6a51.2 51.2 0 0 0-72.192 0l-409.6 409.6a51.2 51.2 0 1 0 72.192 72.192L512 379.392l373.248 373.248A51.2 51.2 0 0 0 972.8 716.8z"
+		/>
+	</svg>
+</template>

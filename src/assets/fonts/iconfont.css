@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url('iconfont.ttf?t=1669258245730') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-32wenjianxiazaimoban:before {
+  content: "\e669";
+}
+
+.icon-xiazaimoban:before {
+  content: "\e63e";
+}
+
+.icon-xiazaimoban1:before {
+  content: "\e653";
+}
+
+.icon-xiazaimoban2:before {
+  content: "\e774";
+}
+
